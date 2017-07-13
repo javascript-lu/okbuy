@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/list.css">
+	<script src = "js/jquery-1.11.3.js"></script>
+    <script src = "js/jquery.cookie.js"></script>
+    <script src = "js/picMove.js"></script>
+    <script src="js/jquery.paging.js"></script>
+      <script type="text/javascript" src="js/goodsCart.js"></script>
+    <script src = "js/index.js"></script>
+    <script type="text/javascript" src = "js/list.js"></script>
+</head>
+<body>
+		<!-- nav begin-->
+	<div class="nav">
+		<div class="nav_top">
+		<!-- 登录和注册 -->
+			<ul class="ul_left">
+				<li><a href="login.html">登录</a><span>|</span></li>
+				<li><a href="register.html">注册</a></li>
+			</ul>
+			<!-- 顶部导航栏下拉菜单 -->
+			<ul class="ul_right">
+				<li>
+				<a href="javascript:;">我的好乐买</a><span></span><i>|</i>
+				<div class="ul_right_1">
+					<p  class="change"><a href="javascript:;">我的订单</a></p>
+					<p><a href="javascript:;">我的收藏</a></p>
+					<p><a href="javascript:;">我的优惠券</a></p>
+				</div>
+				</li>				
+				<li>
+				<a href="javascript:;">手机好乐买</a><span></span><i>|</i>
+				<div class="ul_right_2">
+					<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/appqcode_2.png">
+					<p>下载客户端</p>
+				</div>
+				</li>				
+				<li>
+				<a href="javascript:;">关注好乐买</a><span></span><i>|</i>
+				<div class="ul_right_3">
+					<div class="p1">
+					    <img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/weixinqcode.png">
+					    <p>微信公众号</p>
+					    </div> 
+					<div class="p2">
+						<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/weixinqcode.png">
+						<p>微信福利好</p>
+						</div>
+				</div>
+				</li>
+				
+				<li>
+				<a href="javascript:;">客户服务</a><span></span><i>|</i>
+				<div class="ul_right_4">
+					<p><a href="javascript:;">联系客服</a></p>
+					<p><a href="javascript:;">帮助中心</a></p>
+					<p><a href="javascript:;">意见建议</a></p>
+				</div>
+				</li>
+				
+				<li>
+				<a href="javascript:;">公告</a><span></span><i id="last">|</i>
+				<div class="ul_right_5">
+					<p><a href="javascript:;">运费规则调整公告（2017年6月1日执行）</a></p>
+					<p><a href="javascript:;">户外春夏好货推荐</a></p>
+				</div>
+				</li>
+				
+			</ul>
+		</div>
+		<div class="nav_mid">
+		<!-- logo -->
+			<div class="nav_mid_l">
+				<a href="javascript:;">
+				   <img src="img/login_new_logo.png" alt="logo">
+				</a>
+			</div>
+			<!-- search -->
+			<div class="nav_mid_c">
+				<form action="" method="get">
+					<input type="text" id="search" value="" placeholder="男士polo衫">
+					<input type="button" id="btn" value="">
+					<span>
+					<a href="javascript:;">跑步鞋</a>
+					<a href="javascript:;">男休闲鞋</a>
+					<a href="javascript:;">阿迪达斯</a>
+					<a href="javascript:;">耐克</a>
+					<a href="javascript:;">牛仔裤</a>
+					<a href="javascript:;">匡威</a>
+					</span>
+				</form>
+			</div>
+			<!-- cart -->
+			<div class="nav_mid_r">
+				<a href="shoppingCart.html">
+					<span>去购物车结算<b id="goodsNum">0</b></span>
+				</a>
+					<!-- 加入购物车的隐藏页面 -->
+			 <div class="addCart">	
+			  <!-- 动态加载数据 -->
+			</div> 
+			</div>
+		</div>
+		<div class="nav_bot">
+			<ul class="warp">
+				<li><a href="javascript:;" id="warp_li_1">首页</a></li>
+				<li><a href="javascript:;" id="warp_li_2"></a></li>
+				<li><a href="javascript:;">运动生活</a>
+				   <div class="warp_list_3">
+				     <div class="column_1">
+						   	<h3>品牌导购</h3>
+						   	<div class="row_1"><h3>运动鞋</h3><p class="shoes"></p></div>
+						   	<div class="row_2"><h3>运动服</h3><p class="clothes"></p></div>
+						   	<div class="row_3"><h3>运动周边</h3><p class="around"></p></div>
+				    </div>
+					   <div class="column_2"><h3>运动导购</h3></div>
+					   <div class="column_3"><h3>品牌导购</h3></div>
+			     </div>
+				</li>
+				<li><a href="javascript:;">户外鞋服</a>
+				 <div class="warp_list_4">
+				     <div class="column_4_1">
+						   	<h3>户外服饰</h3>
+						   	<div class="row_4_1"><h3>男装</h3><p class="men"></p></div>
+						   	<div class="row_4_1"><h3>女装</h3><p class="women"></p></div>
+				    </div>
+					   <div class="column_4_2"><h3>户外生活</h3></div>
+					   <div class="column_4_3"><h3>品牌导购</h3></div>
+			     </div>
+				</li>
+				<li><a href="javascript:;">男女名鞋</a>
+				 <div class="warp_list_5">
+				     <div class="column_5_1">
+						   	<h3>名鞋</h3>
+						   	<div class="row_5_1"><h3>夏款</h3><p class="summer"></p></div>
+						   	<div class="row_5_1"><h3>秋冬款</h3><p class="winter"></p></div>
+				    </div>
+					   <div class="column_5_2"><h3>名鞋导航</h3></div>
+					   <div class="column_5_3"><h3>品牌导购</h3></div>
+			     </div>
+				</li>
+				<li><a href="javascript:;">快乐儿童</a>
+				 <div class="warp_list_6">
+				     <div class="column_6_1">
+						   	<h3>品类导航</h3>
+						   	<div class="row_6_1"><h3>儿童鞋类</h3><p class="child_clothes"></p></div>
+						   	<div class="row_6_1"><h3>儿童服饰</h3><p class="child_shoes"></p></div>
+				    </div>
+					   <div class="column_6_2"><h3>儿童生活</h3></div>
+					   <div class="column_6_3"><h3>品牌导购</h3></div>
+			     </div>
+				</li>
+				<li>
+				<a href="javascript:;" id="warp_li_3">
+				<img src="http://i.okaybuy.cn/images/multipic/new/201701/7d/7de29d4226bbf3855eb7eca34a680cc5.gif" alt="">
+				全球购
+				</a>
+				</li>
+				<li><a href="javascript:;">家居包配</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	<!-- nav over-->
+	<!-- nav over-->
+    <!-- list_main begin -->
+    <div class="list_main">
+    	<div class="list_main_in">
+    		<div class="section">
+    			<div class="section_1">
+    				<h5>性别:</h5>
+    				<div class="section_1_list">
+    					<span class="all"><a href="javascript:;">全部</a></span>
+    					<ul>
+    						<li><a href="javascript:;">男</a></li>
+    						<li><a href="javascript:;">女</a></li>
+    					</ul>
+    				</div>
+    			</div>
+    			<div class="section_1">
+    				<h5>分类:</h5>
+    				<div class="section_1_list">
+    					<span class="all"><a href="javascript:;">全部</a></span>
+    					<ul>
+    						<li><a href="javascript:;">鞋</a></li>
+    						<li><a href="javascript:;">服装</a></li>
+    						<li><a href="javascript:;">配件</a></li>
+    						<li><a href="javascript:;">包</a></li>
+    						<li><a href="javascript:;">运动鞋</a></li>
+    						<li><a href="javascript:;">运动服</a></li>
+    						<li><a href="javascript:;">休闲运动鞋</a></li>
+    						<li><a href="javascript:;">板鞋</a></li>
+    						<li><a href="javascript:;">篮球衣</a></li>
+    						<li><a href="javascript:;">足球鞋</a></li>
+    						<li><a href="javascript:;">跑步鞋</a></li>
+    						<li><a href="javascript:;">鞋</a></li>
+    						<li><a href="javascript:;">服装</a></li>
+    						<li><a href="javascript:;">配件</a></li>
+    						<li><a href="javascript:;">包</a></li>
+    						<li><a href="javascript:;">运动鞋</a></li>
+    						<li><a href="javascript:;">运动服</a></li>
+    						<li><a href="javascript:;">休闲运动鞋</a></li>
+    						<li><a href="javascript:;">板鞋</a></li>
+    						<li><a href="javascript:;">篮球衣</a></li>
+    						<li><a href="javascript:;">足球鞋</a></li>
+    						<li><a href="javascript:;">跑步鞋</a></li>
+    						<li><a href="javascript:;">鞋</a></li>
+    						<li><a href="javascript:;">服装</a></li>
+    						<li><a href="javascript:;">配件</a></li>
+    						<li><a href="javascript:;">包</a></li>
+    						<li><a href="javascript:;">运动鞋</a></li>
+    						<li><a href="javascript:;">运动服</a></li>
+    						<li><a href="javascript:;">休闲运动鞋</a></li>
+    						<li><a href="javascript:;">板鞋</a></li>
+    						<li><a href="javascript:;">篮球衣</a></li>
+    						<li><a href="javascript:;">足球鞋</a></li>
+    						<li><a href="javascript:;">跑步鞋</a></li>
+    					</ul>
+    					<a href="javascript:;" >更多<span class="more" ></span></a>
+    					
+    				</div>
+    			</div>
+    			<div class="section_1">
+    				<h5>品牌:</h5>
+    				<div class="section_1_list">
+    					<span class="all"><a href="javascript:;">全部</a></span>
+    					<ul>
+    						<li><a href="javascript:;">阿迪达斯</a></li>
+    						<li><a href="javascript:;">三叶草</a></li>
+    						<li><a href="javascript:;">阿迪达斯运动生活</a></li>
+    					</ul>
+    				</div>
+    			</div>
+    			<div class="section_1">
+    				<h5>尺码:</h5>
+    				<div class="section_1_list">
+    					<span class="all"><a href="javascript:;">全部</a></span>
+    					<ul>
+    						<li><a href="javascript:;">2XS</a></li>
+    						<li><a href="javascript:;">30</a></li>
+    						<li><a href="javascript:;">32</a></li>
+    						<li><a href="javascript:;">34</a></li>
+    						<li><a href="javascript:;">35</a></li>
+    						<li><a href="javascript:;">36</a></li>
+    						<li><a href="javascript:;">37</a></li>
+    						<li><a href="javascript:;">38</a></li>
+
+    						<li><a href="javascript:;">39</a></li>
+    						<li><a href="javascript:;">40</a></li>
+    						<li><a href="javascript:;">41.5</a></li>
+    						<li><a href="javascript:;">42</a></li>
+    						<li><a href="javascript:;">42.5</a></li>
+    						<li><a href="javascript:;">43</a></li>
+    						<li><a href="javascript:;">44</a></li>
+
+    					</ul>
+    					<a href="javascript:;" >更多<span class="more"></span></a>
+    				</div>
+    			</div>
+    			<div class="section_1">
+    				<h5>颜色:</h5>
+    				<div class="section_1_list colorlist">
+    					<span class="all"><a href="javascript:;">全部</a></span>
+    					<ul>
+    						<li><a href="javascript:;"></a></li>
+    						<li><a href="javascript:;"></a></li>
+    					</ul>
+    				</div>
+    			</div>
+    			<div class="section_1">
+    				<h5>价格:</h5>
+    				<div class="section_1_list">
+    					<input type="text" name="" id="ipt1">
+    					-
+    					<input type="text" name="" id="ipt2">
+    					<input type="button" name="" value="确定" id="ipt3">
+    				</div>
+    			</div>
+    		</div>
+
+    	</div>
+    	<div class="goodsList">
+    			<div class="goodsList_nav">
+    				<div class="goodsList_nav_l">
+    					<a href="javascript:;">默认</a>
+    					<a href="javascript:;">价格</a>
+    					<a href="javascript:;">销量</a>
+    					<a href="javascript:;">最新</a>
+    				</div>
+    				<div class="goodsList_nav_r"></div>
+    			</div>
+    			<div class="goodsList_det">
+    				<ul>
+    				
+    				</ul>
+    			</div>
+    			<div class="pages_out"><div class="pages"></div></div>
+    		</div>
+
+    </div>
+    <!-- list_main over -->
+    <!-- Activity begin -->
+    <div class="Activity">
+    	<div class="ActivityTop">
+    		<img src="http://i.okaybuy.cn/images/multipic/new/201302/32/3219b6519b8f4e01a231fa01f135c18b.gif">
+    	</div>
+    	<ul class="ActivityMid">
+    		<!-- 动态创建 -->
+    	</ul>
+    	<div class="ActivityBot"><a href="javascript:;"><img src="http://i.okaybuy.cn/static/1cf8e882837f6088cff1c25e51ee126f.jpg"></a>
+           <a href="javascript:;"><img src="http://i.okaybuy.cn/static/b9859587ca51e1c14a3411942e934e86.jpg"></a>
+    	</div>
+    </div>
+    <!-- Activity over -->
+
+	<!-- footer begin -->
+	<div class="footer">
+		<div class="code">
+			<div class="phone">
+			<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/code_client.png" >
+			<p>好乐买手机客户端</p>
+			</div>
+			<div class="weixin1">
+			<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/code_client.png" >
+			<p>好乐买微信公众号</p>
+			</div>
+			<div class="weixin2">
+			<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/common/code_client.png" >
+			<p>好乐买微信福利号</p>
+			</div>
+		</div>
+		<div class="list">
+			<ul>
+				<li>
+				<p class="title">购物指南</p>
+				<p><a href="javascript:;">购物流程</a></p>
+				<p><a href="javascript:;">订购方式</a></p>
+				<p><a href="javascript:;">常见问题</a></p>
+				</li>
+				<li>
+					<p class="title">配送方式</p>
+					<p><a href="javascript:;">快递配送</a></p>
+					<p><a href="javascript:;">配送时间</a></p>
+				</li>
+				<li>
+					<p class="title">支付方式</p>
+					<p><a href="javascript:;">支付方式</a></p>
+					<p><a href="javascript:;">代金券</a></p>
+				</li>
+				<li>
+					<p class="title">售后服务</p>
+					<p><a href="javascript:;">退换货政策</a></p>
+					<p><a href="javascript:;">退款说明</a></p>
+					<p><a href="javascript:;">联系客服</a></p>
+				</li>
+			</ul>
+		</div>
+		<div class="pic">		
+			<p class="images">
+			<a href="javascript:;">
+			<img src="http://0.js.lx.okbuycdn.com/resources/images/v6/index/okbuy1-03.png" alt=""></a>
+			<a href="javascript:;"><img src="http://0.js.lx.okbuycdn.com/resources/images/v6/index/okbuy1-05.png" alt=""></a>
+			<a href="javascript:;"><img src="http://i.okaybuy.cn/images/multipic/new/201508/90/902c39b52902b3bd4ab500babad4e14a.png" alt=""></a>
+			<a href="javascript:;"><img src="http://0.js.lx.okbuycdn.com/resources/images/v6/index/bjwj.jpg" alt=""></a>
+			</p>
+			<p class="words">
+				<a href="javascript:;">公司介绍</a>|
+				<a href="javascript:;">加入我们</a>|
+				<a href="javascript:;">联系我们</a>|
+				<a href="javascript:;">友情链接</a>|
+			</p>
+		</div>
+	</div>
+	<!-- footer over -->
+	<!-- bottom -->
+	<div class="bottom">天津好乐买信息技术有限公司    Copyright © 2007-2017 OkBuy.com All Rights Reserved <a href="javascript:;">津ICP备16005872号-1</a> 京公网安备110105006859   客服电话：400-8610-400 
+	</div>
+</body>
+</html>

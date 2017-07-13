@@ -1,0 +1,291 @@
+/*注册页面css*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body {
+    background: #fff;
+    font-family: Arial,SimSun,Helvetica,sans-serif;
+    color: #333;
+    font-size: 12px;
+}
+.header {
+    width: 990px;
+    height: 100px;
+    margin: 0 auto;
+}
+.header_left {
+    float: left;
+}
+.header_right {
+    width: 604px;
+    height: 100px;
+    line-height: 100px;
+    float: right;
+}
+.header_right span {
+    margin-left: 60px;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+    color: #666;
+}
+.header_right span i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png)
+    -76px -60px no-repeat;
+}
+/*main*/
+.main {
+    width: 1425px;
+    height: 560px;
+    overflow: hidden;
+}
+.main >a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main a img {
+    position: relative;
+    left: 50%;
+    margin-left: -1000px;
+}
+.login {
+    box-sizing: border-box;
+    width: 400px;
+    height: 520px;
+    background: #ffffff;
+    position: absolute;left: 800px;top: 120px;
+    overflow: hidden;
+    padding: 0px 30px 0 30px;
+}
+/*扫码登录界面*/
+.scanLife {
+    box-sizing: border-box;
+    height: 300px;
+    width: 400px;
+    position: relative;
+    top: -290px;
+    left: -30px;
+    overflow: hidden;
+    padding: 0px 30px 0 30px;
+    background: #ffffff;
+    display: none;
+}
+.scanLife p {
+    margin-top: 50px;
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+}
+.scanLife a {
+    display: block;
+    width: 200px;
+    height: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #666666;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.scanLife  .scanLife_move {
+    height: 200px;
+}
+#scanLife_img_1 {
+    position: relative;left: 75px;top: 20px;
+    width: 180px;
+    height: 180px;
+}
+#scanLife_img_2 {
+    position: absolute;left: 210px;top: 20px;
+    display: none;
+}
+.scanLife a i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: 3px;
+    margin-right: 10px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -52px -58px no-repeat;
+}
+.scanLife_img {
+    position: absolute;left: 125px;top: 392px;
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    z-index: 999;
+    display: none;
+}
+.scanLife_img img {
+    /*display: inline-block;*/
+    padding: 7px 0 0 7px;
+    width: 126px;
+    height: 126px;
+    /*position: relative;left: 100px;top: 50px;*/
+    z-index: 999;
+}
+.login .login_top {
+    width: 340px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Microsoft Yahei';
+    color: #333;
+    margin-bottom: 10px;
+}
+.login .login_top span {
+    display: inline-block;
+    width: 160px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.login .login_top span:nth-child(1){
+    border-right: 1px #999999 solid;
+    color: #d70057;
+}
+.login_mid .login_mid_form p {
+    width: 340px;
+    height: 30px;
+}
+
+#username,#password {
+    width: 340px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 50px;
+}
+#submit {
+    width: 340px;
+    height: 50px;
+    background: #d70057;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+
+}
+ #submit:hover {
+     opacity: 0.7;
+ }
+.login_mid_form_btn span a {
+    display: block;
+    color: #999;
+    float: right;
+    font-size: 12px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.login_bot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 360px;
+    padding: 16px 30px 16px 10px;
+    background: #f6f6f6;
+}
+.login_bot_left {
+    float: left;
+}
+.login_bot_left a {
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #e0e0e0;
+}
+.login_bot_left #pic_1 i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -23px -58px no-repeat;
+}
+.login_bot_left #pic_2 i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -5px -42px no-repeat;
+}
+.login_bot_left #pic_3 i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -5px -76px no-repeat;
+}
+.login_bot_left #pic_4 i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -53px -30px no-repeat;
+}
+.login_bot_left #pic_5 i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -23px -30px no-repeat;
+}
+
+#pic_6 {
+    float: right;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #666;
+}
+ #pic_6 i {
+     display: inline-block;
+     width: 16px;
+     height: 17px;
+     vertical-align: middle;
+     margin: -3px 5px 0 0;
+     background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -76px -30px no-repeat;;
+}
+
+/*表单验证*/
+.login_mid_form p {
+    box-sizing: border-box;
+    padding-top: 7px;
+}
+.login_mid_form i {
+     display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.login_mid_form span {
+    vertical-align: center;
+    font-size: 14px;
+    color: #d00
+}
+.warning {
+    background: url("http://0.js.lx.okbuycdn.com/resources/images/v6/common/ui_login.png")
+    -76px 0 no-repeat;
+}
+/*底部*/
+.footer {
+    height: 28px;
+    margin: 80px auto 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 28px;
+}
